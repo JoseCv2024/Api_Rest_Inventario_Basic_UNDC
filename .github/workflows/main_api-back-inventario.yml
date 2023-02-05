@@ -32,14 +32,14 @@ jobs:
 
   deploy:
     runs-on: windows-latest
-    needs: build
+    needs: frontend/build
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: java-app
 
