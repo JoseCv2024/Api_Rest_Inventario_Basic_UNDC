@@ -1,0 +1,13 @@
+.\mvnw.cmd clean install
+.\mvnw.cmd spring-boot:run
+
+
+__________________________
+
+$ ng s --host 0.0.0.0  // Para compartir a nivel de red
+$ npm update | npm install
+
+$ ng s --port 5000
+____________________________
+- Actualizar node desde web: https://nodejs.org/en/
+- Actualizar npm web: https://docs.npmjs.com/try-the-latest-stable-version-of-npm
