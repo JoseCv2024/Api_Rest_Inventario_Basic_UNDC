@@ -47,7 +47,7 @@ public class UsuarioController extends AbstractRestController{
                 return new ResponseEntity(response, HttpStatus.OK);
             }
         } catch (Exception e) {
-            log.error("Usuario - crear usuario", "Ocurrió un error : " + e.getMessage());
+            log.error("Usuario - crear usuario", "Ocurrió un error: " + e.getMessage());
             response = buildResponse(Constantes.STATUS_ERROR, null, Constantes.MESSAGE_ERROR_500, e);
 
             return new ResponseEntity(result, HttpStatus.INTERNAL_SERVER_ERROR);
