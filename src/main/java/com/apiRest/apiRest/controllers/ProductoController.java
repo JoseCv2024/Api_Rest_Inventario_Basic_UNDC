@@ -29,7 +29,7 @@ public class ProductoController extends AbstractRestController{
 
     @PostMapping(path = "/eliminarProducto")
     public ResponseEntity eliminarProducto(@RequestBody ProductoDto data){
-        log.info("Producto - eliminar Producto",data.toString());
+        log.info("Producto - eliminar Producto.",data.toString());
 
         ResponseEntity result = null;
         ResultClassEntity response = new ResultClassEntity();
