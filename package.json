@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "find-parent-dir": "^0.3.1"
+  }
+}
