@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: java-app
-          path: '*.jar'
+          path: '${{ github.workspace }}/target/*.jar'
 
   deploy:
     runs-on: ubuntu-latest
@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'Api-Rest-Inventario-Basic-undc'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8893D02F76C047A89A1FFF1863AD634A }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_594F32FF21EC4FD188623949963330E9 }}
           package: '*.jar'
