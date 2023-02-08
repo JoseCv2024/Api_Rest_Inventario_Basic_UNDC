@@ -30,17 +30,15 @@ jobs:
           name: java-app
           path: '*.jar'
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v2
+
+          
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v1
         with:
-          name: java-app
+          app-name: 'Api-Rest-Inventario-Basic-undc'
+          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_594F32FF21EC4FD188623949963330E9 }}
+          package: '*.jar'
 
 
