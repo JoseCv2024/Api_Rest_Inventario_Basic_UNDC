@@ -12,7 +12,7 @@ public class ApiRestApplication {
 
 		try{
 		
-		System.out.println("Proceso terminado...");  
+		System.out.println("Proceso terminado....");  
 		}catch(Exception e)
         {
             System.out.println(e);
